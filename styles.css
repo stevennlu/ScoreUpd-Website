@@ -27,20 +27,20 @@ header {
 }
 
 
-.side-bar-nav, .ad-space {
+.side-bar-nav, .video-space {
     background-color: #202020;
     padding: 20px;
     border-radius: 10px;
     min-height: 60vh;
 }
 
-.side-bar-nav h5, .ad-space h5 {
+.side-bar-nav h5, .video-space h5 {
     font-weight: 600;
     color: #ffa500;
 }
 
 
-.side-bar-nav a, .ad-space a {
+.side-bar-nav a, .video-space a {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -51,7 +51,7 @@ header {
 }
 
 
-.side-bar-nav a:hover, .ad-space a:hover, .hover-orange:hover {
+.side-bar-nav a:hover, .video-space a:hover, .hover-orange:hover {
     background-color: #ffa500;
     color: #1a1a1a;
 }
@@ -84,13 +84,13 @@ iframe {
 }
 
 @media (max-width: 1000px) {
-     .side-bar-nav, .ad-space {
+     .side-bar-nav, .video-space {
         display: none;
     }
 }
 
 @media (max-height: 600px) {
-     .side-bar-nav,.ad-space {
+     .side-bar-nav,.video-space {
         display: none;
     }
 }
