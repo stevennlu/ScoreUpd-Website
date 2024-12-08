@@ -7,7 +7,7 @@ body {
 header {
     background-color: #202020 !important;
  
-    border-bottom: 2px solid hsl(39, 100%, 50%);
+    border-bottom: 2px solid #ffa500;
 }
 
 
@@ -78,6 +78,7 @@ iframe {
 .bg-black {
     background-color: #202020 !important;
 }
+
 
 .text-warning {
     color: #ffa500 !important;
@@ -157,19 +158,6 @@ iframe {
     
     .leagues-horizontal::-webkit-scrollbar {
         height: 5px; /* Thin scrollbar height */
-    }
-    
-    .leagues-horizontal::-webkit-scrollbar-thumb {
-        background: #888; /* Scrollbar thumb color */
-        border-radius: 10px; 
-    }
-    
-    .leagues-horizontal::-webkit-scrollbar-thumb:hover {
-        background: #555; 
-    }
-    
-    .leagues-horizontal::-webkit-scrollbar-track {
-        background: transparent; 
     }
 
     
