@@ -10,9 +10,6 @@ header {
     border-bottom: 2px solid hsl(39, 100%, 50%);
 }
 
-.ad-space {
-    display: block !important;
-}
 
 
 .nav-link {
@@ -178,3 +175,9 @@ iframe {
     
     
 }
+
+
+.ad-space {
+    display: block !important;
+}
+
