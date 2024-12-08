@@ -1,0 +1,176 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+header {
+    background-color: #202020 !important;
+ 
+    border-bottom: 2px solid hsl(39, 100%, 50%);
+}
+
+
+.nav-link {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #ffa500;
+}
+
+.nav-link:active {
+    color: #ffa500;
+    font-weight: bold;
+}
+
+
+.side-bar-nav, .ad-space {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 60vh;
+}
+
+.side-bar-nav h5, .ad-space h5 {
+    font-weight: 600;
+    color: #ffa500;
+}
+
+
+.side-bar-nav a, .ad-space a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.side-bar-nav a:hover, .ad-space a:hover, .hover-orange:hover {
+    background-color: #ffa500;
+    color: #1a1a1a;
+}
+
+.content-box {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    background-color: #202020;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.bg-dark {
+    background-color: #1a1a1a !important;
+}
+
+.bg-black {
+    background-color: #202020 !important;
+}
+
+.text-warning {
+    color: #ffa500 !important;
+}
+
+@media (max-width: 1000px) {
+     .side-bar-nav, .ad-space {
+        display: none;
+    }
+}
+
+@media (max-height: 600px) {
+     .side-bar-nav,.ad-space {
+        display: none;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect Ratio */
+    overflow: hidden;
+  }
+  
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .videos-layout {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+  }
+
+
+  @media (max-width: 768px) {
+    .leagues-horizontal {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto ; 
+        padding: 5px;
+        background-color: #202020;
+        border-radius: 5px;
+    }
+
+    .leagues-horizontal a {
+        flex: 0 0 auto; 
+        white-space: nowrap; 
+        padding: 8px 12px;
+        background-color: #1a1a1a;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .leagues-horizontal a:hover {
+        background-color: #ffa500;
+        color: #000;
+    }
+
+    :-webkit-scrollbar{
+        height: 5px;
+    }
+
+    .leagues-horizontal {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: thin; 
+        scrollbar-color: #888 transparent; 
+    }
+    
+    .leagues-horizontal::-webkit-scrollbar {
+        height: 5px; /* Thin scrollbar height */
+    }
+    
+    .leagues-horizontal::-webkit-scrollbar-thumb {
+        background: #888; /* Scrollbar thumb color */
+        border-radius: 10px; 
+    }
+    
+    .leagues-horizontal::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+    
+    .leagues-horizontal::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+
+    
+    
+}
