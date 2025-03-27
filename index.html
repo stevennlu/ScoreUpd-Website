@@ -3,154 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>ScoreUpd</title>
     
+    
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="2.0.3/widgets.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>ScoreUpd</title>
 </head>
 
-<body class="bg-dark text-light">
-    
+<body class="">
 
-    <header class="text-warning py-3">
+    <nav class="mx-auto max-w-6xl min-h-screen flex flex-col bg-[#fff] font-['Oswald'] ">
+
         
-        
-        <nav class="container">
-            <div class="display-3 d-flex align-items-center gap-2">
-            <h1 class="display-3 d-flex align-items-center gap-2">ScoreUpd</h1>
-            <img src="tibbixel-dot-com-20618-svg.svg" class="svg-icon">
-        </div>
+        <div class="">
+            <h1 class="text-[#3a506b] text-5xl font-bold p-4 flex justify-center items-center mt-4">ScoreUpd</h1>
             
-            <nav class="d-flex gap-3 mt-3">
-                <a href="#" class="text-light nav-link" onclick="switchSection(event,'standings')">Standings</a>
-                <a href="#" class="text-light nav-link" onclick="switchSection(event, 'games')">Games</a>
-                
-            </nav>
+        </div>
+
+        <nav class="flex justify-center items-center gap-4">
+            <div class="nav-link text-lg hover:text-[#8d99ae] hover:cursor-pointer" onclick="switchSection(event,'standings')">Standings</div>
+            <div> | </div>
+            <div class="nav-link text-lg hover:text-[#8d99ae] hover:cursor-pointer" onclick="switchSection(event,'games')">Games</div>
         </nav>
-    </header>
 
+       
 
-<!-- <form onsubmit="handleLogin(event)" class="mt-4 text-center">
-    <div class="d-inline-flex align-items-center gap-2">
-        <input type="text" id="username" placeholder="Username" class="form-control w-50" required>
-        <button type="submit" style="background-color: #ffa500; ;">
-            <i class="fas fa-user"></i> Login
-        </button>
-    </div>
-</form> -->
+        <nav class="text-black flex items-center justify-center">
+            
+            <div class="flex p-4 overflow-x-auto whitespace-nowrap scrollbar-custom scroll-smooth gap-4">
+                <a href="#" data-standings="standings/standingsCL.html" data-games="Games/CLgames.html" class="league-link active bg-slate-300/80 rounded-lg p-1 hover:bg-slate-400 ">UEFA CL</a>
+            <a href="#" data-standings="standings/standingsLL.html" data-games="Games/LLgames.html"class="league-link bg-slate-300/80 rounded-lg p-1 hover:bg-slate-400 ">La Liga</a>
+            <a href="#" data-standings="standings/standingsPL.html" data-games="Games/PLgames.html"class="league-link bg-slate-300/80 rounded-lg p-1 hover:bg-slate-400 ">Premier League</a>
+            <a href="#" data-standings="standings/standingsMX.html" data-games="Games/MXgames.html"class="league-link bg-slate-300/80 rounded-lg p-1 hover:bg-slate-400 ">Liga MX</a>
+            <a href="#" data-standings="standings/standingsCopa.html" data-games="Games/CopaAMGames.html"class="league-link bg-slate-300/80 rounded-lg p-1 hover:bg-slate-400 ">Copa America</a>
+            <a href="#" data-standings="standings/standingsBL.html" data-games="Games/BLgames.html"class="league-link bg-slate-300/80 rounded-lg p-1 hover:bg-slate-400 ">Bundesliga</a>
 
-    
-
-    <div class="container-fluid mt-4">
-        <!-- horizontal sidebar for small screens -->
-        <div class="leagues-horizontal d-sm-flex d-md-none">
-            <a href="#" data-standings="standingsCL.html" data-games="CLgames.html" class="league-link active">UEFA CL</a>
-            <a href="#" data-standings="standingsLL.html" data-games="LLgames.html" class="league-link">La Liga</a>
-            <a href="#" data-standings="standingsPL.html" data-games="PLgames.html" class="league-link">Premier League</a>
-            <a href="#" data-standings="standingsMX.html" data-games="MXgames.html" class="league-link">Liga MX</a>
-            <a href="#" data-standings="CopaAM.html" data-games="CopaAMGames.html" class="league-link">Copa America</a>
-            <a href="#" data-standings="standingsL1.html" data-games="BLgames.html" class="league-link">Bundesliga</a>
-        </div>
-
-        
-
-        <div class="row">
-            <!-- sidebar for medium to large screens -->
-            <nav class="side-bar-nav col-lg-2 col-md-2 d-none d-md-block p-3 bg-black rounded shadow-lg text-light">
-                <h5 class="text-warning mb-3">Leagues</h5>
-                <a href="#" class="d-block py-2 px-3 rounded hover-orange league-link" data-standings="standingsCL.html" data-games="CLgames.html">UEFA CL</a>
-                <a href="#" class="d-block py-2 px-3 rounded hover-orange league-link" data-standings="standingsLL.html" data-games="LLgames.html">La Liga</a>
-                <a href="#" class="d-block py-2 px-3 rounded hover-orange league-link" data-standings="standingsPL.html" data-games="PLgames.html">Premier League</a>
-                <a href="#" class="d-block py-2 px-3 rounded hover-orange league-link" data-standings="standingsMX.html" data-games="MXgames.html">Liga MX</a>
-                <a href="#" class="d-block py-2 px-3 rounded hover-orange league-link" data-standings="CopaAM.html" data-games="CopaAMGames.html">Copa America</a>
-                <a href="#" class="d-block py-2 px-3 rounded hover-orange league-link" data-standings="standingsL1.html" data-games="BLgames.html">Bundesliga</a>
-            </nav>
+            </div>
 
             
-            <main class="col-lg-8 col-md-8 p-3">
-                <div class="content-box bg-black text-center p-4 rounded shadow-lg">
-                    <iframe src="standingsCL.html" class="score-box"></iframe>
-                </div>
-            </main>
+            
+        
+        </nav>
 
-            <!-- Ad Space -->
-            <nav class="video-space col-lg-2 col-md-2 d-none d-md-block p-3 bg-black rounded shadow-lg text-light"
-            >
-                <h5 class="text-warning mb-3">Advertisements</h5>
-                <div class="videos-layout row h-100">
-                    <div class="video-wrapper">
-                        <video class="video-player" autoplay loop muted>
-                            <source src="vid1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-wrapper">
-                        <video class="video-player" autoplay loop muted>
-                            <source src="vid2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-wrapper">
-                        <video class="video-player" autoplay loop muted>
-                            <source src="vid3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        
-                </div>
-                </div>
-            </nav>
+        <div class="flex justify-center items-center  ">
+            <iframe src="standings/standingsCL.html" class="score-box w-full p-2 min-h-screen"></iframe>
+
+            
         </div>
-    </div>
+
+    </nav>
 
     <script>
-      let currentSection = "standings"; 
-
-      function switchSection(event, section) {
-          event.preventDefault();
-
-          
-          document.querySelectorAll('.nav-link').forEach(link => {
-              link.style.textDecoration = 'none';
-          });
-
-          // Add underline to the clicked link
-          event.target.style.textDecoration = 'underline';
-
-          // Update the current section
-          currentSection = section;
-
-         
-          const iframe = document.querySelector('.score-box');
-          iframe.src = section === "standings" ? "standingsCL.html" : "CLgames.html";
-      }
-
-     
-      document.querySelectorAll('.league-link').forEach(link => {
-          link.addEventListener('click', (event) => {
-              event.preventDefault();
-
-              const iframe = document.querySelector('.score-box');
-
-             
-              const leagueSrc = link.dataset[currentSection];
-              if (leagueSrc) {
-                  iframe.src = leagueSrc;
-              }
-
-          });
-      });
-  </script>
-
+        let currentSection = "standings"; 
   
+        function switchSection(event, section) {
+            event.preventDefault();
+  
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.style.textDecoration = 'none';
+            });
+  
+            // Add underline to the clicked link
+            event.target.style.textDecoration = 'underline';
+  
+            // Update the current section
+            currentSection = section;
+  
+           
+            const iframe = document.querySelector('.score-box');
+            iframe.src = section === "standings" ? "standings/standingsCL.html" : "Games/CLgames.html";
+        }
+  
+       
+        document.querySelectorAll('.league-link').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+  
+                const iframe = document.querySelector('.score-box');
+  
+               
+                const leagueSrc = link.dataset[currentSection];
+                if (leagueSrc) {
+                    iframe.src = leagueSrc;
+                }
+  
+            });
+        });
+
+        
+
+
+       
+
+
+
+    </script>
+    
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
 </body>
 </html>
+
+
 
 
